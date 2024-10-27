@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Centralizar o título */
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+/* Espaço entre os campos "Nome" e "Idade" e alinhamento das caixas de texto */
+form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+form input[type='text'],
+form input[type='number'] {
+    margin-left: 10px;
+}
+
+/* Espaço entre o campo "Idade" e o botão "Adicionar" */
+form button {
+    margin-top: 1px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+button {
+    padding: 5px 10px;
+}

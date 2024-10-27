@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+    # Serviço do backend
+    backend:
+        build: ./backend
+        ports:
+            - '5000:5000'
+        depends_on:
+            - db
+        environment:
+            DB_HOST: db
+            DB_USER: tayling
+            DB_NAME: banco_cadastro
+        secrets:
+            - mysql_root_password
+            - mysql_password
+        networks:
+            - idade-network
+        volumes:
+            - db-data-idade:/var/lib/mysql
+
+    # Serviço do frontend
+    frontend:
+        build: ./frontend
+        ports:
+            - '80:80'
+        networks:
+            - idade-network
+
+    # Serviço do banco de dados MySQL
+    db:
+        image: mysql:8.0
+        environment:
+            MYSQL_DATABASE: banco_cadastro
+            MYSQL_USER: tayling
+            MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
+            MYSQL_PASSWORD_FILE: /run/secrets/mysql_password
+        ports:
+            - '3306:3306'
+        volumes:
+            - db-data-idade:/var/lib/mysql
+        secrets:
+            - mysql_root_password
+            - mysql_password
+        networks:
+            - idade-network
+
+# Define a rede para conectar os serviços
+networks:
+    idade-network:
+        driver: bridge
+
+# Define o volume
+volumes:
+    db-data-idade:
+
+# Define os secrets
+secrets:
+    mysql_root_password:
+        file: ./secrets/mysql_root_password.txt
+    mysql_password:
+        file: ./secrets/mysql_password.txt
