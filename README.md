@@ -55,4 +55,4 @@ A comunicação entre o Frontend (Nginx) e o Backend (Flask) é feita da seguint
 
 ## Feedback e Nota da Atividade:
 
-![Nota e feedback do avaliador](https://onedrive.live.com/download?resid=ArdP1yoBrPbelKRmOV28dAlvB2PAjQ)
+![Nota e feedback do avaliador](https://github.com/Tayling-Ng/Docker-Compose_localhost_M-dulo-06/blob/main/feedback_nota.JPG)
