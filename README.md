@@ -11,14 +11,6 @@ Nesta atividade prática o residente recebe uma aplicação Web Full-Stack e dev
 -   **Nginx**: Servidor Web que serve o Frontend e age como proxy reverso para a API do Backend.
 -   **Docker**: A infraestrutura é conteinerizada, permitindo isolamento e portabilidade entre ambientes.
 
-## Comunicação entre o Frontend e o Backend:
-
-A comunicação entre o Frontend (Nginx) e o Backend (Flask) é feita da seguinte maneira:
-
--   O **Nginx** foi configurado como um proxy reverso, recebendo as requisições HTTP dos clientes e redirecionando chamadas para o Backend.
--   Sempre que o Frontend fizer uma chamada para `/api`, o Nginx encaminha a requisição para o Backend Flask, rodando na porta 5000.
--   As requisições do Frontend, como criação e listagem de usuários, são redirecionadas para o Backend, que processa a requisição, interage com o Banco de Dados e retorna a resposta ao Nginx, que a envia de volta ao cliente no navegador.
-
 ## Tarefas:
 
 1. **Criar os Dockerfiles** para o Backend e Frontend, e o `docker-compose.yml` para orquestrar os containers e subir a infraestrutura completa usando Docker.
