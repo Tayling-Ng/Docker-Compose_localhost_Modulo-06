@@ -2,7 +2,7 @@
 
 ## Descrição da Atividade:
 
-Nesta atividade prática, o residente recebe uma aplicação Web Full-Stack e deve configurar e subir uma infraestrutura completa orquestrada via Docker Compose.
+Nesta atividade prática o residente recebe uma aplicação Web Full-Stack e deve configurar e subir uma infraestrutura completa orquestrada via Docker Compose.
 
 ## Descrição do Cenário:
 
